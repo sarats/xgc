@@ -2,8 +2,26 @@
 
 ## GPU Memory Usage
 
+Existing tools like nvprof do not have the ability to easily identify GPU high-memory watermark. Hence, memory utilzation data is gathered through Nvidia device monitoring tool (nvidia-smi) and plotted over duration of application execution. 
+
+
+**Problem configuration:**
+Num. planes: 4 
+Num. nodes: 128
+Num. MPI processes: 768
+Num. OMP threads: 14
+Ptls/rank: 54.2 M
+Code: XGC-Devel master Cabana-highmem(04/24), CUDA Fortran (04/24), Cabana-lowmem (04/30)
+
 ### Comparison across versions
+The following plot shows memory usage of rank 0 (GPU 0 on first node) for all XGC variants.
+
 ![GPU Memory Usage ](img/memusage.png  "GPU Memory Usage")
+
+***
+
+**Note: **
+The following plots show memory usage for several MPI ranks where samples are collected from one GPU for every 10 nodes (60 MPI ranks).
 
 ### Cabana High-memory version: GPU Memory Usage
 ![ ](img/cab-all.png  "Cabana High-memory Memory Usage")
@@ -20,7 +38,7 @@
 ## GPU profiling using Nvprof
   
 ### Cabana Low-memory version
-[Profile](files/report-xgc-cab-lowmem.txt) 
+[Full Profile](files/report-xgc-cab-lowmem.txt) 
 
 Overview: 
 ```
@@ -35,7 +53,8 @@ Overview:
 ```
 
 ### Cabana High-memory version
-[Profile](files/report-xgc-cab-nvprof.txt) 
+[Full Profile](files/report-xgc-cab-nvprof.txt) 
+
 Overview: 
 ```
 ======== Profiling result:                                                                                                                                                                                       
@@ -50,7 +69,7 @@ Overview:
 ```
 
 ### Cabana CUDA Fortran version
-[Profile](files/report-xgc-cudaftn.txt) 
+[Full Profile](files/report-xgc-cudaftn.txt) 
 
 Overview: 
 ```

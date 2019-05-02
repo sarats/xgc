@@ -1,0 +1,159 @@
+======== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   90.75%  122.719s       210  584.38ms  564.88ms  599.51ms  push_mod_gpu_pushe_kernel_gpu_
+                    1.19%  1.60800s       690  2.3304ms  1.6451ms  10.540ms  reorder_gpu_mod_dreorder_gpu_
+                    1.06%  1.43266s      2472  579.56us  532.51us  982.01us  col_f_angle_avg_m_102_gpu
+                    1.02%  1.37917s     24820  55.566us  51.456us  207.36us  col_f_e_and_d_s_991_gpu
+                    0.99%  1.33538s     24820  53.802us  47.679us  214.33us  col_f_e_and_d_m_659_gpu
+                    0.86%  1.16630s    323915  3.6000us     864ns  7.3375ms  [CUDA memcpy HtoD]
+                    0.64%  859.58ms     50320  17.082us  1.2480us  26.007ms  [CUDA memcpy DtoH]
+                    0.60%  815.74ms     24820  32.866us  26.880us  214.94us  col_f_e_and_d_s_918_gpu
+                    0.57%  776.83ms       782  993.39us  513.21us  1.0374ms  [CUDA memcpy DtoD]
+                    0.39%  533.66ms        46  11.601ms  10.848ms  26.694ms  sort_mod_gpu_gen_perm_tri_gpu_pass2_
+                    0.26%  349.50ms        46  7.5978ms  7.5254ms  8.0223ms  gen_perm_gpu_mod_isum_single_gpu_kernel_
+                    0.25%  333.71ms        46  7.2546ms  7.2078ms  7.5358ms  sort_mod_gpu_gen_perm_tri_gpu_pass1_
+                    0.22%  293.16ms         4  73.291ms  72.845ms  74.462ms  push_mod_gpu_chargee_search_kernel_
+                    0.20%  271.82ms        46  5.9091ms  5.6999ms  6.1555ms  gen_perm_gpu_mod_setup_lcount_gpu_
+                    0.20%  267.70ms       400  669.26us  54.911us  810.75us  ptl_module_gpu_kernel_ptl_array_to_type_
+                    0.19%  257.35ms         4  64.337ms  53.268ms  75.551ms  push_mod_gpu_init_tr_save_gpu_
+                    0.15%  204.27ms      4944  41.316us  29.440us  422.78us  col_f_angle_avg_s_787_gpu
+                    0.11%  155.24ms        46  3.3747ms  3.3601ms  3.5204ms  cuf_util_kernel_zero_mem_
+                    0.08%  107.28ms        46  2.3321ms  1.6510ms  10.533ms  reorder_gpu_mod_lreorder_gpu_
+                    0.06%  81.981ms       240  341.59us  170.98us  378.11us  ptl_module_gpu_kernel_phase0_array_to_type_
+                    0.06%  75.763ms        46  1.6470ms  1.1009ms  9.7734ms  reorder_gpu_mod_ireorder_gpu_
+                    0.05%  70.977ms     64472  1.1000us     896ns  4.6080us  [CUDA memset]
+                    0.04%  48.683ms       400  121.71us  17.056us  132.83us  ptl_module_gpu_kernel_ptl_type_to_array_
+                    0.02%  30.446ms       240  126.86us  57.728us  133.98us  ptl_module_gpu_kernel_phase0_type_to_array_
+                    0.02%  25.883ms        46  562.68us  554.37us  575.81us  gen_perm_gpu_mod_isum_col_gpu_
+                    0.02%  24.008ms        46  521.91us  505.02us  547.32us  gen_perm_gpu_mod_isetval_kernel_gpu_
+                    0.00%  3.6939ms        32  115.43us  83.552us  122.40us  psn_class_gpu_kernel_dim1_to_end_
+                    0.00%  3.0657ms        49  62.565us  1.0880us  396.09us  __pgi_dev_cumemset_16n
+                    0.00%  44.255us         4  11.063us  11.008us  11.136us  __pgi_dev_cumemset_8n
+                    0.00%  37.632us         3  12.544us  1.4720us  34.400us  [CUDA memcpy HtoA]
+                    0.00%  24.063us         4  6.0150us  5.8560us  6.2400us  __pgi_dev_cumemset_4n
+      API calls:   41.44%  83.6983s         8  10.4623s  7.3320us  32.9089s  cudaEventSynchronize
+                   35.58%  71.8491s     84510  850.19us  65.836us  575.42ms  cudaLaunchKernel
+                   12.33%  24.9045s       636  39.158ms  12.391us  24.8939s  cudaMemcpyToSymbol
+                    2.98%  6.00912s    322561  18.629us  7.1600us  89.978ms  cuMemcpyHtoDAsync
+                    2.85%  5.75013s    131516  43.721us  6.4370us  349.14ms  cuStreamSynchronize
+                    1.49%  3.00410s         1  3.00410s  3.00410s  3.00410s  cuDevicePrimaryCtxRelease
+                    0.98%  1.97708s     49766  39.727us  5.3850us  348.76ms  cuEventSynchronize
+                    0.54%  1.09705s     64472  17.015us  5.6930us  71.176ms  cuMemsetD32Async
+                    0.45%  903.00ms     49640  18.190us  10.156us  1.1012ms  cuMemcpyDtoHAsync
+                    0.32%  641.50ms       479  1.3393ms  7.7820us  8.3900ms  cuMemAlloc
+                    0.31%  620.71ms       106  5.8557ms  6.8690us  26.022ms  cudaMalloc
+                    0.21%  422.92ms     49794  8.4930us  4.2650us  104.72us  cuEventRecord
+                    0.14%  290.65ms        15  19.377ms  11.986ms  24.360ms  cuMemHostAlloc
+                    0.12%  233.55ms        11  21.232ms  18.896us  155.04ms  cudaHostRegister
+                    0.11%  218.38ms     84587  2.5810us     861ns  13.256ms  cuPointerGetAttributes
+                    0.06%  124.74ms        95  1.3131ms  6.9250us  5.0917ms  cudaFree
+                    0.03%  52.786ms         8  6.5983ms  26.428us  13.439ms  cudaStreamSynchronize
+                    0.02%  36.173ms      2126  17.014us  7.4090us  82.769us  cudaMemcpyAsync
+                    0.01%  26.581ms        14  1.8987ms  10.519us  5.5351ms  cuMemAllocHost
+                    0.01%  21.605ms         4  5.4013ms  1.3395ms  13.740ms  cudaMemGetInfo
+                    0.01%  19.133ms        42  455.55us  12.177us  7.4551ms  cudaMemcpy
+                    0.01%  14.210ms         2  7.1049ms  6.5987ms  7.6110ms  cuMemFreeHost
+                    0.01%  13.909ms         1  13.909ms  13.909ms  13.909ms  cuModuleLoadData
+                    0.01%  13.292ms        97  137.03us     224ns  7.2064ms  cuDeviceGetAttribute
+                    0.00%  3.8677ms        57  67.853us  27.988us  101.21us  cudaLaunch
+                    0.00%  2.7876ms      1316  2.1180us  1.3280us  17.909us  cudaPointerGetAttributes
+                    0.00%  2.2740ms         1  2.2740ms  2.2740ms  2.2740ms  cuDeviceGetName
+                    0.00%  1.1768ms       152  7.7420us  3.2380us  77.239us  cudaEventRecord
+                    0.00%  1.1714ms         1  1.1714ms  1.1714ms  1.1714ms  cuDeviceTotalMem
+                    0.00%  750.46us        60  12.507us  5.4490us  63.598us  cudaEventQuery
+                    0.00%  721.46us       210  3.4350us     865ns  30.447us  cuEventCreate
+                    0.00%  618.84us        14  44.202us  22.263us  120.78us  cuStreamCreate
+                    0.00%  492.15us         2  246.08us  7.1130us  485.04us  cudaMallocArray
+                    0.00%  467.97us         1  467.97us  467.97us  467.97us  cudaMalloc3DArray
+                    0.00%  414.67us        40  10.366us  9.4930us  15.140us  cudaEventElapsedTime
+                    0.00%  331.60us        12  27.633us  24.025us  33.226us  cudaMemcpyFromSymbol
+                    0.00%  227.12us        84  2.7030us  1.5190us  10.218us  cudaStreamWaitEvent
+                    0.00%  186.75us         7  26.678us  11.673us  103.47us  cudaStreamCreate
+                    0.00%  130.41us        87  1.4980us  1.3040us  3.1680us  cudaEventCreate
+                    0.00%  95.053us       322     295ns     199ns  16.541us  cudaSetupArgument
+                    0.00%  81.963us        16  5.1220us  3.1600us  9.8180us  cudaBindTexture
+                    0.00%  80.553us        28  2.8760us     660ns  7.8080us  cuCtxSetCurrent
+                    0.00%  55.532us         2  27.766us  24.518us  31.014us  cudaMemcpyToArray
+                    0.00%  55.509us         5  11.101us  1.7910us  19.856us  cuModuleGetFunction
+                    0.00%  53.042us         8  6.6300us  1.7090us  13.060us  cudaDeviceSetCacheConfig
+                    0.00%  47.042us         1  47.042us  47.042us  47.042us  cudaMemcpy3D
+                    0.00%  26.796us        57     470ns     334ns  1.0330us  cudaConfigureCall
+                    0.00%  20.579us         4  5.1440us  4.9310us  5.3570us  cudaUnbindTexture
+                    0.00%  18.854us        16  1.1780us     525ns  4.4940us  cudaGetSymbolAddress
+                    0.00%  16.354us         3  5.4510us  4.0090us  7.6030us  cudaBindTextureToArray
+                    0.00%  5.0860us        17     299ns     225ns     543ns  cudaCreateChannelDesc
+                    0.00%  4.4350us         1  4.4350us  4.4350us  4.4350us  cuDeviceGetPCIBusId
+                    0.00%  3.9680us         1  3.9680us  3.9680us  3.9680us  cuInit
+                    0.00%  3.4370us        11     312ns     207ns     716ns  cudaGetLastError
+                    0.00%  3.3080us         4     827ns     510ns  1.3060us  cuDeviceGetCount
+                    0.00%  2.3810us         3     793ns     314ns  1.1510us  cuDeviceGet
+                    0.00%  1.5370us         1  1.5370us  1.5370us  1.5370us  cuCtxGetDevice
+                    0.00%  1.2740us         1  1.2740us  1.2740us  1.2740us  cuDeviceComputeCapability
+                    0.00%  1.0160us         1  1.0160us  1.0160us  1.0160us  cuDriverGetVersion
+                    0.00%     658ns         1     658ns     658ns     658ns  cuCtxGetCurrent
+                    0.00%     547ns         1     547ns     547ns     547ns  cudaRuntimeGetVersion
+ OpenACC (excl):   14.87%  34.0869s     49640  686.68us  3.0490us  349.05ms  acc_enter_data@collisionf2.F90:642
+                   10.41%  23.8661s     24820  961.57us  36.372us  350.33ms  acc_enter_data@collisionf2.F90:899
+                    9.25%  21.2052s     24820  854.36us  91.316us  90.771ms  acc_enqueue_launch@collisionf2.F90:991 (col_f_e_and_d_s_991_gpu)
+                    8.98%  20.5993s     49640  414.97us  3.1870us  541.94ms  acc_exit_data@collisionf2.F90:642
+                    8.47%  19.4198s     24820  782.42us  100.23us  87.320ms  acc_enqueue_launch@collisionf2.F90:918 (col_f_e_and_d_s_918_gpu)
+                    8.29%  18.9986s     24820  765.45us  92.592us  90.435ms  acc_enqueue_launch@collisionf2.F90:659 (col_f_e_and_d_m_659_gpu)
+                    6.04%  13.8577s     24820  558.33us  23.337us  85.905ms  acc_exit_data@collisionf2.F90:899
+                    4.07%  9.32597s      4944  1.8863ms  30.975us  383.56ms  acc_enter_data@collisionf2.F90:761
+                    2.68%  6.15230s     24820  247.88us  8.5410us  90.437ms  acc_enter_data@collisionf2.F90:980
+                    2.50%  5.73716s     24820  231.15us  6.4370us  347.96ms  acc_enter_data@collisionf2.F90:897
+                    2.43%  5.56304s      2472  2.2504ms  35.789us  541.92ms  acc_enter_data@collisionf.F90:1974
+                    2.09%  4.79367s      4944  969.59us  130.79us  125.73ms  acc_enqueue_launch@collisionf2.F90:787 (col_f_angle_avg_s_787_gpu)
+                    2.09%  4.78849s     24820  192.93us  7.7900us  348.80ms  acc_exit_data@collisionf2.F90:980
+                    1.83%  4.20769s    198560  21.191us  9.3100us  62.859ms  acc_enqueue_upload@collisionf2.F90:642
+                    1.57%  3.60004s     24820  145.05us  6.4430us  90.237ms  acc_enter_data@collisionf2.F90:640
+                    1.53%  3.50122s     24820  141.06us  18.935us  480.00ms  acc_wait@collisionf2.F90:707
+                    1.26%  2.88835s    124100  23.274us  8.5010us  89.988ms  acc_enqueue_upload@collisionf2.F90:899
+                    1.21%  2.77843s      2472  1.1240ms  67.642us  14.102ms  acc_enter_data@collisionf2.F90:75
+                    1.11%  2.55523s     24820  102.95us  18.624us  348.86ms  acc_wait@collisionf2.F90:1003
+                    1.10%  2.51995s      4944  509.70us  23.272us  85.713ms  acc_exit_data@collisionf2.F90:761
+                    0.98%  2.24430s      2472  907.89us  123.92us  88.695ms  acc_enqueue_launch@collisionf2.F90:102 (col_f_angle_avg_m_102_gpu)
+                    0.93%  2.13396s     24820  85.977us  7.2380us  67.967ms  acc_exit_data@collisionf2.F90:706
+                    0.88%  2.01209s      2472  813.95us  28.613us  349.80ms  acc_exit_data@collisionf2.F90:75
+                    0.87%  1.99384s     24820  80.332us  7.4330us  62.872ms  acc_exit_data@collisionf2.F90:1002
+                    0.79%  1.80426s     24820  72.693us  11.848us  479.38ms  acc_wait@collisionf2.F90:704
+                    0.65%  1.48484s     24820  59.824us  11.081us  192.67ms  acc_wait@collisionf2.F90:973
+                    0.55%  1.26482s     24820  50.959us  9.5560us  67.994ms  acc_wait@collisionf2.F90:998
+                    0.42%  961.39ms     24820  38.734us  19.501us  142.50ms  acc_enqueue_download@collisionf2.F90:706
+                    0.39%  903.15ms      2472  365.35us  18.550us  71.422ms  acc_exit_data@collisionf.F90:1974
+                    0.36%  835.12ms     24820  33.646us  19.181us  31.952ms  acc_enqueue_download@collisionf2.F90:1002
+                    0.24%  561.61ms     24820  22.627us  11.302us  1.2336ms  acc_enqueue_upload@collisionf2.F90:980
+                    0.22%  503.35ms     24720  20.362us  7.5990us  15.185ms  acc_enqueue_upload@collisionf2.F90:761
+                    0.21%  480.37ms        14  34.312ms  34.266ms  34.319ms  acc_device_init@collisionf.F90:1974
+                    0.20%  460.84ms      2472  186.42us  28.364us  192.17ms  acc_compute_construct@collisionf2.F90:75
+                    0.14%  316.97ms     14832  21.370us  7.7640us  7.0477ms  acc_enqueue_upload@collisionf2.F90:75
+                    0.12%  283.45ms      2472  114.67us  14.546us  30.565ms  acc_wait@collisionf2.F90:258
+                    0.09%  205.13ms      4944  41.491us  11.269us  49.363ms  acc_wait@collisionf2.F90:855
+                    0.06%  128.78ms     24820  5.1880us  3.4360us  172.21us  acc_compute_construct@collisionf2.F90:899
+                    0.06%  128.43ms     24820  5.1740us  3.2940us  126.13us  acc_compute_construct@collisionf2.F90:642
+                    0.06%  128.18ms     24820  5.1640us  3.3340us  177.20us  acc_compute_construct@collisionf2.F90:980
+                    0.01%  26.165ms      4944  5.2920us  3.5500us  132.28us  acc_compute_construct@collisionf2.F90:761
+                    0.00%  44.619us         1  44.619us  44.619us  44.619us  acc_enqueue_upload@collisionf.F90:1974
+                    0.00%       0ns    198560       0ns       0ns       0ns  acc_delete@collisionf2.F90:703
+                    0.00%       0ns     24820       0ns       0ns       0ns  acc_delete@collisionf2.F90:706
+                    0.00%       0ns        71       0ns       0ns       0ns  acc_alloc@collisionf2.F90:761
+                    0.00%       0ns         5       0ns       0ns       0ns  acc_alloc@collisionf2.F90:642
+                    0.00%       0ns     24720       0ns       0ns       0ns  acc_create@collisionf2.F90:761
+                    0.00%       0ns     24820       0ns       0ns       0ns  acc_create@collisionf2.F90:640
+                    0.00%       0ns    198560       0ns       0ns       0ns  acc_create@collisionf2.F90:642
+                    0.00%       0ns     24820       0ns       0ns       0ns  acc_delete@collisionf2.F90:997
+                    0.00%       0ns        87       0ns       0ns       0ns  acc_alloc@collisionf2.F90:75
+                    0.00%       0ns      9888       0ns       0ns       0ns  acc_delete@collisionf.F90:2191
+                    0.00%       0ns        14       0ns       0ns       0ns  acc_alloc@collisionf2.F90:897
+                    0.00%       0ns        33       0ns       0ns       0ns  acc_alloc@collisionf2.F90:899
+                    0.00%       0ns     24820       0ns       0ns       0ns  acc_create@collisionf2.F90:897
+                    0.00%       0ns    124100       0ns       0ns       0ns  acc_create@collisionf2.F90:899
+                    0.00%       0ns     24820       0ns       0ns       0ns  acc_delete@collisionf2.F90:1002
+                    0.00%       0ns     27192       0ns       0ns       0ns  acc_create@collisionf2.F90:75
+                    0.00%       0ns     24820       0ns       0ns       0ns  acc_create@collisionf2.F90:980
+                    0.00%       0ns     12360       0ns       0ns       0ns  acc_delete@collisionf2.F90:252
+                    0.00%       0ns     14832       0ns       0ns       0ns  acc_delete@collisionf2.F90:257
+                    0.00%       0ns    124100       0ns       0ns       0ns  acc_delete@collisionf2.F90:972
+                    0.00%       0ns       255       0ns       0ns       0ns  acc_alloc@collisionf.F90:1974
+                    0.00%       0ns     24720       0ns       0ns       0ns  acc_delete@collisionf2.F90:854
+                    0.00%       0ns      9888       0ns       0ns       0ns  acc_create@collisionf.F90:1974

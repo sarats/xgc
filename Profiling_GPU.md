@@ -12,9 +12,9 @@ Existing tools like nvprof do not have the ability to easily identify GPU high-m
 * Num. OMP threads: 14
 * Particles/rank: 54.2 M
 * Code: XGC-Devel master 
-**	Cabana-highmem(04/24): Git HEAD commit ID:  6fb1be316a5da75097dd45960af59257119fe753
-**	CUDA Fortran  (04/24): Git HEAD commit ID:  6fb1be316a5da75097dd45960af59257119fe753
-**	Cabana-lowmem (04/30): Git HEAD commit ID:  e66e44cf99491c4a9fa4e15732c99f625440a52c
+*	Cabana-highmem(04/24): Git HEAD commit ID:  6fb1be316a5da75097dd45960af59257119fe753
+*	CUDA Fortran  (04/24): Git HEAD commit ID:  6fb1be316a5da75097dd45960af59257119fe753
+*	Cabana-lowmem (04/30): Git HEAD commit ID:  e66e44cf99491c4a9fa4e15732c99f625440a52c
 * Memory tracking was done for 20 time steps.
 
 ### Comparison across versions

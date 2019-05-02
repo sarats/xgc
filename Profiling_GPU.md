@@ -2,16 +2,20 @@
 
 ## GPU Memory Usage
 
-Existing tools like nvprof do not have the ability to easily identify GPU high-memory watermark. Hence, memory utilzation data is gathered through Nvidia device monitoring tool (nvidia-smi) and plotted over duration of application execution. 
+Existing tools like nvprof do not have the ability to easily identify GPU high-memory watermark. Hence, memory utilzation data is gathered through Nvidia device monitoring tools and plotted over duration of application execution. 
 
 
 **Problem configuration:**
-Num. planes: 4 
-Num. nodes: 128
-Num. MPI processes: 768
-Num. OMP threads: 14
-Ptls/rank: 54.2 M
-Code: XGC-Devel master Cabana-highmem(04/24), CUDA Fortran (04/24), Cabana-lowmem (04/30)
+* Num. planes: 4 
+* Num. nodes: 128
+* Num. MPI processes: 768
+* Num. OMP threads: 14
+* Particles/rank: 54.2 M
+* Code: XGC-Devel master 
+**	Cabana-highmem(04/24): Git HEAD commit ID:  6fb1be316a5da75097dd45960af59257119fe753
+**	CUDA Fortran  (04/24): Git HEAD commit ID:  6fb1be316a5da75097dd45960af59257119fe753
+**	Cabana-lowmem (04/30): Git HEAD commit ID:  e66e44cf99491c4a9fa4e15732c99f625440a52c
+* Memory tracking was done for 20 time steps.
 
 ### Comparison across versions
 The following plot shows memory usage of rank 0 (GPU 0 on first node) for all XGC variants.
@@ -26,17 +30,26 @@ The following plots show memory usage for several MPI ranks where samples are co
 ### Cabana High-memory version: GPU Memory Usage
 ![ ](img/cab-all.png  "Cabana High-memory Memory Usage")
 
+[Timing Stats](files/cabana-highmem/timing_all.txt_stats) 
+
+
 ### Cabana Low-memory version: GPU Memory Usage
 ![ ](img/cab-lowmem-all.png  "Cabana Low-memory: GPU Memory Usage")
 
+[Timing Stats](files/cabana-lowmem/timing_all.txt_stats) 
+
 ### CUDA Fortran version: GPU Memory Usage
 ![ ](img/cudaftn-all.png  "Cabana CUDA Fortran : GPU Memory Usage")
+
+[Timing Stats](files/cudaftn/timing_all.txt_stats) 
 
 
 ***
 
 ## GPU profiling using Nvprof
   
+Profiling was done with 2 time steps. 
+
 ### Cabana Low-memory version
 [Full Profile](files/report-xgc-cab-lowmem.txt) 
 

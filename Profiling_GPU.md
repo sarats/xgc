@@ -22,6 +22,15 @@ The following plot shows memory usage of rank 0 (GPU 0 on first node) for all XG
 
 ![GPU Memory Usage ](img/memusage.png  "GPU Memory Usage")
 
+The following plots are simplified to compare current Cabana vs. CUDA Fortran as well as include XGC variants individually. 
+
+![ ](img/cudavscabana.png  "XGC CUDA Fortran vs. Cabana : GPU Memory Usage")
+
+![ ](img/cudaftn.png  "XGC CUDA Fortran: GPU Memory Usage")
+
+![ ](img/cabana.png  "Cabana Low-mem: GPU Memory Usage")
+
+
 ***
 
 **Note: **

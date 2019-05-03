@@ -1,3 +1,3 @@
 This space contains performance data and links to results.
 
-* [GPU Profiling on Summit](./Profiling_GPU.md) 
+* [GPU Profiling on Summit](./Profiling_GPU) 

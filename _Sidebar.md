@@ -1,4 +1,3 @@
-***
 * [Home](./Home)
 * [Performance](./Performance)
   * [GPU Profiling on Summit](./Profiling_GPU) 

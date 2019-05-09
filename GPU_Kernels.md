@@ -1,4 +1,4 @@
-# GPU Kernels: Detailed Performance Analysis on Summit
+# GPU Kernel Analysis on Summit
 
 ## Cabana
 

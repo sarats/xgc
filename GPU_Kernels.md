@@ -8,6 +8,18 @@
 [Analysis metrics: All kernels](files/analysis-cab-lowmem-r0.txt`) 
 
 
+Highlights:
+```
+       warp_execution_efficiency                                        Warp Execution Efficiency      89.69%
+                  gld_throughput                                           Global Load Throughput  636.79GB/s
+                  gst_throughput                                          Global Store Throughput  6.1265GB/s
+            dram_read_throughput                                    Device Memory Read Throughput  221.29GB/s
+           dram_write_throughput                                   Device Memory Write Throughput  370.09GB/s
+                  gld_efficiency                                    Global Memory Load Efficiency      24.53%
+                  gst_efficiency                                   Global Memory Store Efficiency      25.00%
+
+```
+
 Main Kernel:
 
 
@@ -144,6 +156,18 @@ Main Kernel:
 ![ ](img/xgc-cudaftn-kernel.png  "CUDA Fortran Kernel")
 
 [Analysis metrics: All kernels](files/analysis-cudaftn-r0.txt) 
+
+Highlights:
+```
+       warp_execution_efficiency                                        Warp Execution Efficiency      92.98%
+                  gld_throughput                                           Global Load Throughput  25.006GB/s
+                  gst_throughput                                          Global Store Throughput  8.3244GB/s
+            dram_read_throughput                                    Device Memory Read Throughput  95.021GB/s
+           dram_write_throughput                                   Device Memory Write Throughput  348.82GB/s
+                  gld_efficiency                                    Global Memory Load Efficiency      58.54%
+                  gst_efficiency                                   Global Memory Store Efficiency     100.00%
+```
+
 
 Main Kernel:
 

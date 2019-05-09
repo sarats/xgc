@@ -5,8 +5,9 @@
 ![ ](img/xgc-cabana.png  "Cabana Overview")
 ![ ](img/xgc-cabana-kernel.png  "Cabana Kernel")
 
-[Analysis metrics: All kernels](files/analysis-cab-lowmem-r0.txt`) 
+[Analysis metrics: All kernels](files/analysis-cab-lowmem-r0.txt) 
 
+[Main Kernel metrics](files/cabana-main-kernel.txt) 
 
 Highlights:
 ```
@@ -162,6 +163,8 @@ Main Kernel:
 ![ ](img/xgc-cudaftn-kernel.png  "CUDA Fortran Kernel")
 
 [Analysis metrics: All kernels](files/analysis-cudaftn-r0.txt) 
+
+[Main Kernel metrics](files/cudaftn-main-kernel.txt) 
 
 Highlights:
 ```

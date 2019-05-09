@@ -10,17 +10,19 @@
 
 Highlights:
 ```
-       warp_execution_efficiency                                        Warp Execution Efficiency      89.69%
-                  gld_throughput                                           Global Load Throughput  636.79GB/s
-                  gst_throughput                                          Global Store Throughput  6.1265GB/s
-            dram_read_throughput                                    Device Memory Read Throughput  221.29GB/s
-           dram_write_throughput                                   Device Memory Write Throughput  370.09GB/s
-                  gld_efficiency                                    Global Memory Load Efficiency      24.53%
-                  gst_efficiency                                   Global Memory Store Efficiency      25.00%
+       warp_execution_efficiency       Warp Execution Efficiency      89.69%
+                  gld_throughput          Global Load Throughput  636.79GB/s
+                  gst_throughput         Global Store Throughput  6.1265GB/s
+            dram_read_throughput   Device Memory Read Throughput  221.29GB/s
+           dram_write_throughput  Device Memory Write Throughput  370.09GB/s
+                  gld_efficiency   Global Memory Load Efficiency      24.53%
+                  gst_efficiency  Global Memory Store Efficiency      25.00%
 
 ```
 ***
 
+<details><summary>Expand for Main Kernel details</summary>
+<p>
 Main Kernel:
 
 
@@ -149,6 +151,9 @@ Main Kernel:
           1                     texture_load_requests        Total number of texture Load requests from Multiprocessor           0           0           0
  
 ```
+</p>
+</details>
+
 
 ## CUDA Fortran
 
@@ -160,16 +165,18 @@ Main Kernel:
 
 Highlights:
 ```
-       warp_execution_efficiency                                        Warp Execution Efficiency      92.98%
-                  gld_throughput                                           Global Load Throughput  25.006GB/s
-                  gst_throughput                                          Global Store Throughput  8.3244GB/s
-            dram_read_throughput                                    Device Memory Read Throughput  95.021GB/s
-           dram_write_throughput                                   Device Memory Write Throughput  348.82GB/s
-                  gld_efficiency                                    Global Memory Load Efficiency      58.54%
-                  gst_efficiency                                   Global Memory Store Efficiency     100.00%
+       warp_execution_efficiency       Warp Execution Efficiency      92.98%
+                  gld_throughput          Global Load Throughput  25.006GB/s
+                  gst_throughput         Global Store Throughput  8.3244GB/s
+            dram_read_throughput   Device Memory Read Throughput  95.021GB/s
+           dram_write_throughput  Device Memory Write Throughput  348.82GB/s
+                  gld_efficiency   Global Memory Load Efficiency      58.54%
+                  gst_efficiency  Global Memory Store Efficiency     100.00%
 ```
 
 
+<details><summary>Expand for Main Kernel details</summary>
+<p>
 Main Kernel:
 
 ```
@@ -297,17 +304,19 @@ Main Kernel:
           1                     texture_load_requests        Total number of texture Load requests from Multiprocessor  1.3875e+10  1.3875e+10  1.3875e+10
  
 ```
+</p>
+</details>
 
 ## Comparison: Push kernel (Cabana vs. CUDA)
                                                                                                   Cabana-push   CUDA-push
 ***
-       warp_execution_efficiency                                        Warp Execution Efficiency      89.69%      92.98%
-                  gld_throughput                                           Global Load Throughput  636.79GB/s  25.006GB/s
-                  gst_throughput                                          Global Store Throughput  6.1265GB/s  8.3244GB/s
-            dram_read_throughput                                    Device Memory Read Throughput  221.29GB/s  95.021GB/s
-           dram_write_throughput                                   Device Memory Write Throughput  370.09GB/s  348.82GB/s
-                  gld_efficiency                                    Global Memory Load Efficiency      24.53%      58.54%
-                  gst_efficiency                                   Global Memory Store Efficiency      25.00%     100.00%
+       warp_execution_efficiency       Warp Execution Efficiency      89.69%      92.98%
+                  gld_throughput          Global Load Throughput  636.79GB/s  25.006GB/s
+                  gst_throughput         Global Store Throughput  6.1265GB/s  8.3244GB/s
+            dram_read_throughput   Device Memory Read Throughput  221.29GB/s  95.021GB/s
+           dram_write_throughput  Device Memory Write Throughput  370.09GB/s  348.82GB/s
+                  gld_efficiency   Global Memory Load Efficiency      24.53%      58.54%
+                  gst_efficiency  Global Memory Store Efficiency      25.00%     100.00%
 ***
 
 

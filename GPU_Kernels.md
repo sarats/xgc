@@ -321,7 +321,10 @@ Main Kernel:
            dram_write_throughput  Device Memory Write Throughput  370.09GB/s  348.82GB/s
                   gld_efficiency   Global Memory Load Efficiency      24.53%      58.54%
                   gst_efficiency  Global Memory Store Efficiency      25.00%     100.00%
+         dram_read_bytes  Total bytes read from DRAM to L2 cache   5.8717e+11  5.7987e+10 
+         dram_write_bytes Total bytes written from L2 to DRAM      9.8198e+11  2.1287e+11
 ```
+
 ***
 
 

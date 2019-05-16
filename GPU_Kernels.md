@@ -325,6 +325,18 @@ Main Kernel:
          dram_write_bytes Total bytes written from L2 to DRAM      9.8198e+11  2.1287e+11
 ```
 
+```
+                                                                             Cabana-push  CUDA-push
+     flop_count_dp_add       Floating Point Operations(Double Precision Add)  2.7319e+11  4.2669e+10                                                                                                             
+     flop_count_dp_fma       Floating Point Operations(Double Precision FMA)  8.1962e+11  1.6500e+11  
+     flop_count_dp_mul       Floating Point Operations(Double Precision Mul)  3.4196e+11  6.7097e+10  
+     flop_count_sp_add       Floating Point Operations(Single Precision Add)           0           0
+     flop_count_sp_fma       Floating Point Operations(Single Precision FMA)  5.6236e+10  1.2243e+10  
+     flop_count_sp_mul        Floating Point Operation(Single Precision Mul)  1320801560           0
+ flop_count_sp_special   Floating Point Operations(Single Precision Special)  6.5634e+10  1.4224e+10  
+
+```
+
 ***
 
 
